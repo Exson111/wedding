@@ -123,3 +123,64 @@ footer {
     font-size: 14px;
     color: #777;
 }
+
+
+/* Декоративные линии */
+.section-divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c8d0c2, transparent);
+    margin: 50px auto;
+}
+
+/* Иллюстративные точки */
+.dots {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-image: radial-gradient(#cfd6c8 1.5px, transparent 1.5px);
+    background-size: 18px 18px;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.dots.left {
+    top: 20%;
+    left: -60px;
+}
+
+.dots.right {
+    bottom: 15%;
+    right: -60px;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.rsvp {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.rsvp h2 {
+    margin-bottom: 15px;
+}
+
+.rsvp-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+iframe {
+    max-width: 640px;
+    margin: auto;
+    border-radius: 20px;
+}
