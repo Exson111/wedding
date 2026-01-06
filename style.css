@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f7f8f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.kids {
+    font-size: 14px;
+    color: #7a8b6f;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.date {
+    letter-spacing: 3px;
+    color: #9aa48f;
+    margin-bottom: 20px;
+}
+
+.photos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.photos img {
+    width: 45%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.invite-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.place {
+    background: #f1f3ee;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #5f6b52;
+}
+
+.footer {
+    font-size: 14px;
+    color: #999;
+}

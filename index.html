@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Артём и Ульяна | Приглашение</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="card">
+    <p class="kids">Когда-то мы были детьми…</p>
+
+    <h1>Артём & Ульяна</h1>
+
+    <p class="date">06 • 06 • 2026</p>
+
+    <div class="photos">
+        <img src="photo1.jpg" alt="Детское фото 1">
+        <img src="photo2.jpg" alt="Детское фото 2">
+    </div>
+
+    <p class="invite-text">
+        Мы выросли,<br>
+        но сохранили любовь из детства 💛<br><br>
+        Будем счастливы разделить с вами<br>
+        день нашей свадьбы
+    </p>
+
+    <div class="place">
+        <p><strong>Место:</strong></p>
+        <p>Эко Отель «Маяк»</p>
+    </div>
+
+    <div id="timer" class="timer"></div>
+
+    <p class="footer">С любовью 🤍</p>
+</div>
+
+<script>
+    const weddingDate = new Date("2026-06-06T00:00:00").getTime();
+
+    const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+
+        if (diff < 0) {
+            document.getElementById("timer").innerHTML = "Сегодня наш день 💍";
+            clearInterval(timer);
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("timer").innerHTML =
+            `${days} дней ${hours} часов ${minutes} минут`;
+    }, 1000);
+</script>
+
+</body>
+</html>
