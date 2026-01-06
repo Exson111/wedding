@@ -2,40 +2,53 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Артём и Ульяна | Приглашение</title>
+    <title>Артём и Ульяна</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<div class="card">
-    <p class="kids">Когда-то мы были детьми…</p>
+<div class="background-decor decor-1"></div>
+<div class="background-decor decor-2"></div>
 
-    <h1>Артём & Ульяна</h1>
+<section class="hero">
+    <p class="subtitle">Приглашение на свадьбу</p>
+    <h1>Артём <span>&</span> Ульяна</h1>
+    <p class="date">06 июня 2026</p>
+</section>
 
-    <p class="date">06 • 06 • 2026</p>
-
+<section class="story">
     <div class="photos">
-        <img src="photo1.jpg" alt="Детское фото 1">
-        <img src="photo2.jpg" alt="Детское фото 2">
+        <img src="photo1.jpg" alt="Детское фото Артёма">
+        <img src="photo2.jpg" alt="Детское фото Ульяны">
     </div>
 
-    <p class="invite-text">
-        Мы выросли,<br>
-        но сохранили любовь из детства 💛<br><br>
-        Будем счастливы разделить с вами<br>
-        день нашей свадьбы
+    <p class="text">
+        Мы приглашаем вас разделить с нами день,<br>
+        в котором начинается наша семейная история.
     </p>
+</section>
 
-    <div class="place">
-        <p><strong>Место:</strong></p>
+<section class="details">
+    <div class="detail-card">
+        <h3>Место</h3>
         <p>Эко Отель «Маяк»</p>
     </div>
 
-    <div id="timer" class="timer"></div>
+    <div class="detail-card">
+        <h3>Когда</h3>
+        <p>06 • 06 • 2026</p>
+    </div>
+</section>
 
-    <p class="footer">С любовью 🤍</p>
-</div>
+<section class="countdown">
+    <h2>До нашего дня осталось</h2>
+    <div id="timer"></div>
+</section>
+
+<footer>
+    <p>Будем счастливы видеть вас 🤍</p>
+</footer>
 
 <script>
     const weddingDate = new Date("2026-06-06T00:00:00").getTime();
@@ -44,7 +57,7 @@
         const now = new Date().getTime();
         const diff = weddingDate - now;
 
-        if (diff < 0) {
+        if (diff <= 0) {
             document.getElementById("timer").innerHTML = "Сегодня наш день 💍";
             clearInterval(timer);
             return;
@@ -55,7 +68,7 @@
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
         document.getElementById("timer").innerHTML =
-            `${days} дней ${hours} часов ${minutes} минут`;
+            `${days} дней • ${hours} часов • ${minutes} минут`;
     }, 1000);
 </script>
 
